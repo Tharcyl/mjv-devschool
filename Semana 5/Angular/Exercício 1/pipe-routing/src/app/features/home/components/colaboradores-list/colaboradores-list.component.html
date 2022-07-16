@@ -1,0 +1,9 @@
+<div *ngFor="let colaborador of colaboradores">
+    <hr>
+    <h3 *ngIf="exibeNome">Nome: {{colaborador.nome}}</h3>
+    <h3>Salário: {{colaborador.salario}}</h3>
+    <h3>Cargo: {{colaborador.cargo}}</h3>
+    <h3 [ngClass]="{'recebe-mais': (colaborador.salario > 4000), 'recebe-menos': (colaborador.salario < 4000)}">Recebe
+      mais que R$4000? {{(colaborador.salario > 4000) ? 'sim' : 'não'}}</h3>
+  </div>
+  <hr>

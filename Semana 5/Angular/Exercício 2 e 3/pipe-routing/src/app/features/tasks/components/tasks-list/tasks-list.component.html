@@ -1,0 +1,6 @@
+<div *ngFor="let task of tasks">
+    <hr>
+    <h3>Tarefa: {{ task.description }}</h3>
+    <p>Completou? {{ task.completed ? 'Sim' : 'Não' }}</p>
+    <p>Data de inclusão: {{ task.inclusionDate | date }}</p>
+</div>
