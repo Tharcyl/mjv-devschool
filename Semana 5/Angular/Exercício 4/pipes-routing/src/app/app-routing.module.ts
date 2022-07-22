@@ -6,7 +6,7 @@ import { LoginComponent } from './features/login/components/login/login.componen
 import { LoginPageComponent } from './features/login/pages/login-page/login-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '',redirectTo: '/sell', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'cadastro', component: CadastroPageComponent },
