@@ -1,0 +1,11 @@
+<div>
+    <h1>Login</h1>
+    <form>
+        <input type="email" [(ngModel)]="email" placeholder="Digite o e-mail" name="email" required>
+        <br><br>
+        <input type="password" [(ngModel)]="senha" placeholder="Digite sua senha" name="senha" required>
+    </form>
+    <br><br>
+    <button (click)="authenticate()">Enviar</button>
+    <p class="error" *ngIf="error">Usuário ou senha inválidos!</p>
+</div>

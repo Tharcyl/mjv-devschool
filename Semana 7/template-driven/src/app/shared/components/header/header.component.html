@@ -1,0 +1,9 @@
+<div class="header">
+  <a href="#default" class="inicio" appBlue>MJV Gym</a>
+  <div class="header-right">
+    <li *ngIf="admin" (click)="navigateByUrl('/home')">Home</li>
+    <li *ngIf="!admin" (click)="navigateByUrl('/cadastro')">Cadastro</li>
+    <li *ngIf="!admin" (click)="navigateByUrl('/login')">Login</li>
+    <li *ngIf="admin" (click)="exit()">Sair</li>
+  </div>
+</div>

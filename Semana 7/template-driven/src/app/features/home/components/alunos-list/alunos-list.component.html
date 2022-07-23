@@ -1,0 +1,6 @@
+<div class="container home-content" *ngFor="let aluno of alunos">
+    <hr>
+    <h3>Aluno: {{ aluno.nome }}</h3>
+    <p>Mensalidade: {{ aluno.valorMensalidade }}</p>
+    <p>Último Pagamento: {{ aluno.dataUltimoPgto | date }}</p>
+</div>
