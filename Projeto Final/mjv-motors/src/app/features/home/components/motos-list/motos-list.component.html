@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let moto of motos">
+    <p>Nome: {{ moto.nome }}</p>
+    <img src="{{ moto.imagem }}">
+</div> -->
+
+<div class="container">
+  <div class="card text-center" style="width: 18rem;" *ngFor="let moto of motos">
+    <img class="card-img-top" src="{{ moto.imagem }}" alt="Imagem de capa do card">
+    <div class="card-body">
+      <h5 class="card-title">{{ moto.nome }}</h5>
+      <h6>Marca: {{ moto.marca }}</h6>
+      <a (click)="motoDetails(moto.id)" class="btn btn-primary">Detalhes</a>
+    </div>
+  </div>
+</div>
