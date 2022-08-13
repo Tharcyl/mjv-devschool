@@ -1,1 +1,13 @@
-<p>moto-details-page works!</p>
+<app-header></app-header>
+
+<div *ngIf="moto">
+    <h1>{{ moto.nome }}</h1>
+    <img src="{{ moto.imagem }}" alt="">
+    <h2>Descrição da moto:</h2>
+    <p>{{ moto.descricao }}</p>
+    <h3>Preço sugerido:  {{ moto.precoSugerido | currency : 'R$'}}</h3>
+    <h3>Fabricante: {{ moto.fabricante }}</h3>
+    <h3>Cilindradas: {{ moto.cilindrada }}cc</h3>
+</div>
+
+<app-footer></app-footer>
