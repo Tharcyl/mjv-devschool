@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CadastroPageComponent } from './features/cadastro/pages/cadastro-page/cadastro-page.component';
 import { HomePageComponent } from './features/home/pages/home-page/home-page.component';
 import { MotoDetailsPageComponent } from './features/home/pages/moto-details-page/moto-details-page.component';
 import { LoginComponent } from './features/login/components/login/login.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
-  {path: 'moto-details/:motoId', component: MotoDetailsPageComponent}
+  {path: 'moto-details/:motoId', component: MotoDetailsPageComponent},
+  {path: 'cadastro', component: CadastroPageComponent}
 ];
 
 @NgModule({

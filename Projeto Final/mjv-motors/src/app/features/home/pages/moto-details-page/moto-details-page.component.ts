@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MotosService } from 'src/app/shared/services/motos.service';
-import { Moto } from '../../models/moto.model';
+import { UsersService } from 'src/app/shared/services/users.service';
+import { Moto } from '../../../../shared/models/moto.model';
 
 @Component({
   templateUrl: './moto-details-page.component.html',
@@ -10,10 +11,14 @@ import { Moto } from '../../models/moto.model';
 export class MotoDetailsPageComponent implements OnInit {
 
   moto?: Moto;
+  user?: boolean;
 
 
   constructor(private activatedRoute: ActivatedRoute,
-    private motosService: MotosService) { }
+    private motosService: MotosService,
+    private userService: UsersService) { 
+      
+    }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -23,7 +28,19 @@ export class MotoDetailsPageComponent implements OnInit {
       this.moto = this.motosService.getById(id);
       console.log(this.moto)
     });
+
+    this.verification();
+    console.log(this.user)
+  
   }
 
+
   
+  verification(){
+    const ver = sessionStorage.getItem('user');
+    if(ver){
+      return this.user = true
+    }
+    return this.user = false;
+  };
 }

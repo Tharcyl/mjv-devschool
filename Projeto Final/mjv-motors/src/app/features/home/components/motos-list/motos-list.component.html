@@ -3,13 +3,18 @@
     <img src="{{ moto.imagem }}">
 </div> -->
 
-<div class="container">
-  <div class="card text-center" style="width: 18rem;" *ngFor="let moto of motos">
-    <img class="card-img-top" src="{{ moto.imagem }}" alt="Imagem de capa do card">
-    <div class="card-body">
-      <h5 class="card-title">{{ moto.nome }}</h5>
-      <h6>Fabricante: {{ moto.fabricante }}</h6>
-      <a (click)="motoDetails(moto.id)" class="btn btn-primary">Detalhes</a>
-    </div>
+<div class="container" >
+  <div class="row">
+    
+      <div id="card" class="card text-center mt-3" style="width: 18rem" *ngFor="let moto of motos">
+        <img class="card-img-top" src="{{ moto.imagem }}" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title">{{ moto.nome }}</h5>
+          <h6>Fabricante: {{ moto.fabricante }}</h6>
+          <a (click)="motoDetails(moto.id)" class="btn btn-primary">Detalhes</a>
+        </div>
+  
+      </div>
+
   </div>
 </div>

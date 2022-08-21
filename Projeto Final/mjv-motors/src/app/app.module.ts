@@ -7,6 +7,7 @@ import { HomeModule } from './features/home/home.module';
 import { LoginModule } from './features/login/login.module';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { CadastroModule } from './features/cadastro/cadastro.module';
 registerLocaleData(localePt)
 
 @NgModule({
@@ -17,7 +18,8 @@ registerLocaleData(localePt)
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    LoginModule
+    LoginModule,
+    CadastroModule
   ],
   providers: [
     {

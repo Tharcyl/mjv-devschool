@@ -8,10 +8,15 @@
 // }
 
 .container{
-    display: flex;
+    // display: flex;
     flex-direction: row;
+    margin: 20px;
+    
 }
 
-div {
-    margin: 20px;
+#card{
+    display: flex;
+    margin-left: 75px;
 }
+
+
